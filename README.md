@@ -1,2 +1,2 @@
-# freire-marcos.github.io
-My personal developer page
+# project-site-flexbox
+a generic site using flxbox for studyng
