@@ -1,14 +1,17 @@
 
-// select in the menu, all tags a that have # on it's href
-const menuItens = document.querySelectorAll('.menu a[href^="#"]');
 
-menuItens.forEach(item => {
+window.onscroll = function(e) {
 
-    item.addEventListener('click', scrollToOnClick);
+    e.preventDefault;
+    if(e.dir === 'up'){
+        alert('scroll up');
+    } else if(e.dir === 'down'){
+        alert('scroll down');
+    }
+}
 
-});
 
-function scrollToOnClick(event) {
+function scrollTo(event) {
 
     event.preventDefault();
     const element = event.target;
