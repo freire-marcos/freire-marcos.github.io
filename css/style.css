@@ -10,11 +10,34 @@ a{text-decoration: none; cursor: pointer;}
 
 .roundedImg {border-radius: 250px; height: 300px; width: 300px;}
 
+
+
+/* ANIMATIONS */
+
 @keyframes changeColor {
-    30% {color: #11bce7}
+    30% {color: #0b82a0}
     60% {color: #b10d72}
     100% {color: #b45ae9}
 }
+
+@keyframes changeBgColor {
+    30% {background-color: #07495a}
+    60% {background-color: #351b23}
+    100% {background-color: #70249c}
+}
+
+@keyframes rotate {
+    to {transform: rotate(90deg)}
+}
+@keyframes rotateOff {
+    to {transform: rotate(-90deg)}
+}
+
+@keyframes jump {
+    50% {transform: translateY(-10px)}
+}
+
+
 
 /* OVERLAY MENU */
 .ovelerlay {
@@ -29,14 +52,17 @@ a{text-decoration: none; cursor: pointer;}
     top: 0;
     background-color: #70249c;
     text-align: center;
-    font-size: 3em;
+    font-size: 2.3em;
     transition: 1s;
+    animation: changeBgColor 20s infinite linear;
 }
-.closebtn {grid-area: 1/5/2/6; display: flex; align-items: center; justify-content: center; font-size: 1.5em; color: #fff;}
-.overlayContent {grid-area: 2/2/3/5;}
-.overlayContent li {margin: 20px 0;}
-.overlayContent li a {color: #fff;}
+.closeBtn {grid-area: 1/5/2/6; display: flex; align-items: center; justify-content: center; font-size: 1.3em; color: #fff; animation: rotateOff 0.5s;}
+.closeBtn:hover {animation: rotate 0.3s ease-in;}
 
+.overlayContent {grid-area: 2/2/3/5;}
+.overlayContent li {margin: 30px 0;}
+.overlayContent li a {color: #fff;}
+.overlayContent li:hover {animation: jump 0.4s 2 ease-in;}
 
 /* HEADER */
 
@@ -45,7 +71,7 @@ header .menuBar h3 {font-family: 'Indie Flower'; font-size: 2.5em; margin: 50px 
 header .menuBar i {font-size: 2.5em; color: #70249c; margin: 50px 100px; cursor: pointer; transition: ease-out;}
 header .menuBar i:hover {animation: blink 0.35s 2 ease-out;}
 
-.hero {background: url(../img/dmitri-popov-173676-unsplash.jpg) no-repeat top; min-height: 75vh; background-size: cover;}
+header .hero {background: url(../img/dmitri-popov-173676-unsplash.jpg) no-repeat; min-height: 75vh; background-size: cover;}
 
 header .hero .heroCover {display: grid; background: #ffffffdd; height: 80vh; opacity: 0.8; grid-template-columns: 1fr repeat(5, 2fr) 1fr; grid-template-rows: 20vh 15vh 1em 40vh;}
 
@@ -54,9 +80,7 @@ header .hero .heroCover h1 {font-size: 2.4em; color: #70249c; padding-top: 10px;
 header .hero .heroCover .h3Container {grid-area: 4/2/5/7; display: flex; justify-content: center; text-align: center;}
 header .hero .heroCover h3 {color: #525252; font-size: 1.8em; max-width: 800px;}
 
-@keyframes blink {
-    50% {transform: translateY(-10px)}
-}
+
 
 
 /* ABOUT */
