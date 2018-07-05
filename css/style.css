@@ -55,9 +55,12 @@ a{text-decoration: none; cursor: pointer;}
     font-size: 2.3em;
     transition: 1s;
     animation: changeBgColor 20s infinite linear;
+
 }
-.closeBtn {grid-area: 1/5/2/6; display: flex; align-items: center; justify-content: center; font-size: 1.3em; color: #fff; animation: rotateOff 0.5s;}
-.closeBtn:hover {animation: rotate 0.3s ease-in;}
+.closeBtnContainer {grid-area: 1/5/2/6; display: flex; align-items: center; justify-content: center;}
+.closeBtnContainer .closeBtn { font-size: 1.3em; color: #fff; }
+.closeBtn i {animation: rotateOff 0.3s;}
+.closeBtn i:hover {animation: rotate 0.3s ease-out;}
 
 .overlayContent {grid-area: 2/2/3/5;}
 .overlayContent li {margin: 30px 0;}
@@ -69,7 +72,7 @@ a{text-decoration: none; cursor: pointer;}
 header .menuBar {width: 100vw; display: flex; flex-direction: row; align-items: center; justify-content: space-between; height: 20vh;}
 header .menuBar h3 {font-family: 'Indie Flower'; font-size: 2.5em; margin: 50px 100px; color: #b45ae9; animation: changeColor 15s infinite ease;}
 header .menuBar i {font-size: 2.5em; color: #70249c; margin: 50px 100px; cursor: pointer; transition: ease-out;}
-header .menuBar i:hover {animation: blink 0.35s 2 ease-out;}
+header .menuBar i:hover {animation: jump 0.35s 2 ease-out;}
 
 header .hero {background: url(../img/dmitri-popov-173676-unsplash.jpg) no-repeat; min-height: 75vh; background-size: cover;}
 
