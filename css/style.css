@@ -58,6 +58,7 @@ a{text-decoration: none; cursor: pointer;}
     font-weight: bold;
     transition: 1s;
     animation: changeBgColor 20s infinite linear;
+    
 
 }
 .closeBtnContainer {grid-area: 1/5/2/6; display: flex; align-items: center; justify-content: center;}
@@ -66,9 +67,12 @@ a{text-decoration: none; cursor: pointer;}
 .closeBtn i:hover {animation: rotate 0.3s ease-out;}
 
 .overlayContent {grid-area: 2/2/3/5; display: flex; align-items: center; justify-content: center; padding: 0;}
+.overlayContent ul {overflow-y: hidden;}
 .overlayContent li {margin-top: 30px; margin-bottom: 30px; transition: 1.5s; min-width: 800px;}
+.overlayContent li:first-child {margin-top: 0;}
+.overlayContent li:last-child {margin-bottom: 0;}
 .overlayContent li a {color: #fff;}
-.overlayContent li:hover {transform: scale(1.7,1.7); transition: 0.3s; padding: 0%;}
+.overlayContent li:hover {transform: scale(1.7,1.7); transition: 0.3s;}
 
 /* HEADER */
 
